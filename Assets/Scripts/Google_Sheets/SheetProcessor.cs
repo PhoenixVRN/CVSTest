@@ -5,6 +5,12 @@ using UnityEngine.Networking;
 
 public class SheetProcessor : MonoBehaviour
 {
+    [SerializeField]
+    private int dataStartRawIndex = 1;
+    [SerializeField]
+    private int _countLev = 10;
+    [SerializeField]
+    private int _countEntity = 6;
     
     // a1,b1,c1,d1
     // a2,b2,c2,d2
@@ -23,7 +29,7 @@ public class SheetProcessor : MonoBehaviour
 
     private const char _cellSeporator = ',';
     private const char _inCellSeporator = ';';
-    private int _countStat = 6;
+   
 
     private Dictionary<string, Color> _colors = new Dictionary<string, Color>()
     {
@@ -35,21 +41,25 @@ public class SheetProcessor : MonoBehaviour
         {"blue", Color.blue},
     };
     
-    public CubesData ProcessData(string cvsRawData)
+    public MinerAllLists ProcessData(string cvsRawData)
     {
         char lineEnding = GetPlatformSpecificLineEnd();
         string[] rows = cvsRawData.Split(lineEnding);
-        int dataStartRawIndex = 1;
         CubesData data = new CubesData();
         data.MinerDataList = new List<MinersData>();
-//        MinerStats mData = new MinerStats();
+        
+        MinerAllLists minerAllLists = new MinerAllLists();
+        minerAllLists.MinerAllList = new List<CubesData>();
 //        mData.MinerStat = new List<CubesData>();
-//        for (int b = _countStat; b > 0; b--)
-//        {
+       
+      
 
 
-            for (int i = dataStartRawIndex; i < rows.Length; i++)
+//            for (int i = dataStartRawIndex; i < rows.Length; i++)
+            for (int i = dataStartRawIndex; i < _countEntity; i++)
             {
+                for (int b = _countLev; b > 0; b--)
+                {
                 string[] cells = rows[i].Split(_cellSeporator);
 
                 string id = ParseString(cells[_id]);
@@ -66,7 +76,7 @@ public class SheetProcessor : MonoBehaviour
 
                 data.MinerDataList.Add(new MinersData()
                 {
-                    Unit_Id = id,
+                    Unit_Id = id + " Lev " + levUpgrade,
                     Level_Upgrade = levUpgrade,
                     Work_Efficiency = work_efficiency,
                     Speed = speed,
@@ -76,15 +86,16 @@ public class SheetProcessor : MonoBehaviour
                     Max_Carried_Resources = max_carried_resources,
                     Working_Speed_X_Multiplier = working_speed_x_multiplier,
                     Upgrade_Price_Soft_Currency = upgrade_price_soft_currency
-
                 });
-            }
- //                mData.MinerStat.Add(data);
-//                 b = 11;
-//        }
+                i++;
+                } 
+                minerAllLists.MinerAllList.Add(data);
+       
+        }
+      
 
-        Debug.Log(data.MinerDataList.ToString());
-        return data;
+//        Debug.Log(data.MinerDataList.ToString());
+        return minerAllLists;
 
     }
 

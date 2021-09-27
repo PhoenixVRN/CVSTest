@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
-  m_FogColor: {r: 0.65080994, g: 0.666729, b: 0.7075472, a: 1}
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.05
+  m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.13296545, g: 0.19145328, b: 0.33962262, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 0ffaa0b7117ba8c47a9d05ae701d4b4d, type: 2}
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,47 +37,47 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2850269, g: 0.3713935, b: 0.49601045, a: 1}
+  m_Sun: {fileID: 705507994}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
-    m_EnvironmentLightingMode: 1
+    m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
-    m_BakeResolution: 32
-    m_AtlasSize: 512
-    m_AO: 1
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
-    m_CompAOExponentDirect: 0.3
+    m_CompAOExponentDirect: 0
     m_ExtractAmbientOcclusion: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
-    m_LightmapsBakeMode: 0
+    m_LightmapsBakeMode: 1
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
-    m_MixedBakeMode: 1
+    m_MixedBakeMode: 2
     m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 256
+    m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentSampleCount: 500
     m_PVREnvironmentReferencePointCount: 2048
     m_PVRFilteringMode: 2
     m_PVRDenoiserTypeDirect: 0
@@ -91,14 +91,14 @@ LightmapSettings:
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousPositionSigmaDirect: 0.548
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 477cc4148fad3449482a3bc3178594e2, type: 2}
+  m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &653260035
+--- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,333 +131,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 653260038}
-  - component: {fileID: 653260036}
-  m_Layer: 0
-  m_Name: Post-process Volume
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &653260036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 653260035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
---- !u!4 &653260038
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 653260035}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1185458753
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1185458755}
-  - component: {fileID: 1185458754}
-  m_Layer: 0
-  m_Name: CubeSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1185458754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185458753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 240794f07be6b7f4683f888bb2cc0802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _loader: {fileID: 1896876186}
---- !u!4 &1185458755
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185458753}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3434849, y: 1.3680263, z: 0.5426121}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1687258581
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1687258585}
-  - component: {fileID: 1687258584}
-  - component: {fileID: 1687258582}
-  - component: {fileID: 1687258583}
-  - component: {fileID: 1687258586}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &1687258582
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687258581}
-  m_Enabled: 1
---- !u!114 &1687258583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687258581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be76e5f14cfee674cb30b491fb72b09b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boost: 3.5
-  positionLerpTime: 0.2
-  mouseSensitivityCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0.5
-      inSlope: 0
-      outSlope: 5
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 2.5
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  rotationLerpTime: 0.01
-  invertY: 0
---- !u!20 &1687258584
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687258581}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &1687258585
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687258581}
-  m_LocalRotation: {x: -0.022957042, y: 0.97606146, z: -0.17338957, w: -0.12927918}
-  m_LocalPosition: {x: 2.32, y: 1.203, z: 2.378}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20.146, y: 195.09, z: 0.001}
---- !u!114 &1687258586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687258581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 1
-  m_Antialiasing: 1
-  m_AntialiasingQuality: 2
-  m_StopNaN: 1
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
---- !u!1 &1896876183
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1896876184}
-  - component: {fileID: 1896876187}
-  - component: {fileID: 1896876186}
-  - component: {fileID: 1896876185}
-  m_Layer: 0
-  m_Name: SheetLoader
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1896876184
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896876183}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6356087, y: 1.2569227, z: -0.16485405}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1896876185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896876183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd016e603ee96224389e1aca1a8cb6c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1896876186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896876183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4f312307fb451c4290a76b6b13609cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sheetId: 1iJX3ueg_OcM9ZyBwAM7gS7JmBjliSE-8qbNj7F-11_4
-  _data:
-    MinerDataList: []
-  Mdata:
-    MinerStat: []
-  _cubeSpawner: {fileID: 1185458754}
-  UpDate: 0
---- !u!114 &1896876187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896876183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a9e171afbbdcf942a1b234f254fc088, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &2138677391
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2138677393}
-  - component: {fileID: 2138677392}
+  - component: {fileID: 705507995}
+  - component: {fileID: 705507994}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -465,31 +140,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!108 &2138677392
+--- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138677391}
+  m_GameObject: {fileID: 705507993}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
-  m_InnerSpotAngle: 21.802082
+  m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.02
-    m_NormalBias: 0.1
-    m_NearPlane: 0.1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -527,17 +202,862 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!4 &2138677393
+--- !u!4 &705507995
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138677391}
-  m_LocalRotation: {x: 0.7064338, y: 0.47771442, z: 0.030843567, w: 0.5213338}
-  m_LocalPosition: {x: 0.24, y: 3, z: 4.18}
+  m_GameObject: {fileID: 705507993}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 45, y: 130, z: 90}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &852458481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852458486}
+  - component: {fileID: 852458485}
+  - component: {fileID: 852458484}
+  - component: {fileID: 852458483}
+  - component: {fileID: 852458482}
+  m_Layer: 0
+  m_Name: LoadData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &852458482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852458481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 240794f07be6b7f4683f888bb2cc0802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _loader: {fileID: 852458483}
+--- !u!114 &852458483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852458481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f312307fb451c4290a76b6b13609cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sheetId: 1iJX3ueg_OcM9ZyBwAM7gS7JmBjliSE-8qbNj7F-11_4
+  _sheetTabId: 1119698386
+  _data: {fileID: 1029076538}
+  _cubeSpawner: {fileID: 852458482}
+--- !u!114 &852458484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852458481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9e171afbbdcf942a1b234f254fc088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &852458485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852458481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd016e603ee96224389e1aca1a8cb6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataStartRawIndex: 1
+  _countStat: 10
+--- !u!4 &852458486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852458481}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &963194225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 963194228}
+  - component: {fileID: 963194227}
+  - component: {fileID: 963194226}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &963194226
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+--- !u!20 &963194227
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &963194228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1029076538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63708dd7bf32b664b97e7df7275e3258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinerDataList:
+  - Unit_Id: Miner_1 Lev 0
+    Level_Upgrade: 0
+    Work_Efficiency: 0
+    Speed: 0
+    Carried_Speed: 0
+    Critical_Power: 0
+    Critical_Chance: 0
+    Max_Carried_Resources: 0
+    Working_Speed_X_Multiplier: 0
+    Upgrade_Price_Soft_Currency: 0
+  - Unit_Id: Miner_1 Lev 1
+    Level_Upgrade: 1
+    Work_Efficiency: 10
+    Speed: 11
+    Carried_Speed: 33
+    Critical_Power: 44
+    Critical_Chance: 55
+    Max_Carried_Resources: 34
+    Working_Speed_X_Multiplier: 23
+    Upgrade_Price_Soft_Currency: 45
+  - Unit_Id: Miner_1 Lev 2
+    Level_Upgrade: 2
+    Work_Efficiency: 10
+    Speed: 11
+    Carried_Speed: 33
+    Critical_Power: 44
+    Critical_Chance: 55
+    Max_Carried_Resources: 34
+    Working_Speed_X_Multiplier: 23
+    Upgrade_Price_Soft_Currency: 45
+  - Unit_Id: Miner_1 Lev 3
+    Level_Upgrade: 3
+    Work_Efficiency: 10
+    Speed: 11
+    Carried_Speed: 33
+    Critical_Power: 44
+    Critical_Chance: 55
+    Max_Carried_Resources: 34
+    Working_Speed_X_Multiplier: 23
+    Upgrade_Price_Soft_Currency: 45
+  - Unit_Id: Miner_1 Lev 4
+    Level_Upgrade: 4
+    Work_Efficiency: 10
+    Speed: 11
+    Carried_Speed: 33
+    Critical_Power: 44
+    Critical_Chance: 55
+    Max_Carried_Resources: 34
+    Working_Speed_X_Multiplier: 23
+    Upgrade_Price_Soft_Currency: 45
+  - Unit_Id: Miner_1 Lev 5
+    Level_Upgrade: 5
+    Work_Efficiency: 10
+    Speed: 11
+    Carried_Speed: 33
+    Critical_Power: 44
+    Critical_Chance: 55
+    Max_Carried_Resources: 34
+    Working_Speed_X_Multiplier: 23
+    Upgrade_Price_Soft_Currency: 45
+  - Unit_Id: Miner_1 Lev 6
+    Level_Upgrade: 6
+    Work_Efficiency: 10
+    Speed: 11
+    Carried_Speed: 33
+    Critical_Power: 44
+    Critical_Chance: 55
+    Max_Carried_Resources: 34
+    Working_Speed_X_Multiplier: 23
+    Upgrade_Price_Soft_Currency: 45
+  - Unit_Id: Miner_1 Lev 7
+    Level_Upgrade: 7
+    Work_Efficiency: 10
+    Speed: 11
+    Carried_Speed: 33
+    Critical_Power: 44
+    Critical_Chance: 55
+    Max_Carried_Resources: 34
+    Working_Speed_X_Multiplier: 23
+    Upgrade_Price_Soft_Currency: 45
+  - Unit_Id: Miner_1 Lev 8
+    Level_Upgrade: 8
+    Work_Efficiency: 10
+    Speed: 11
+    Carried_Speed: 33
+    Critical_Power: 44
+    Critical_Chance: 55
+    Max_Carried_Resources: 34
+    Working_Speed_X_Multiplier: 23
+    Upgrade_Price_Soft_Currency: 45
+  - Unit_Id: Miner_1 Lev 9
+    Level_Upgrade: 9
+    Work_Efficiency: 10
+    Speed: 11
+    Carried_Speed: 33
+    Critical_Power: 44
+    Critical_Chance: 55
+    Max_Carried_Resources: 34
+    Working_Speed_X_Multiplier: 23
+    Upgrade_Price_Soft_Currency: 45
+  - Unit_Id: Miner_1 Lev 10
+    Level_Upgrade: 10
+    Work_Efficiency: 10
+    Speed: 11
+    Carried_Speed: 33
+    Critical_Power: 44
+    Critical_Chance: 55
+    Max_Carried_Resources: 34
+    Working_Speed_X_Multiplier: 23
+    Upgrade_Price_Soft_Currency: 45
+  - Unit_Id: Miner_2 Lev 0
+    Level_Upgrade: 0
+    Work_Efficiency: 35
+    Speed: 53
+    Carried_Speed: 33
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_2 Lev 1
+    Level_Upgrade: 1
+    Work_Efficiency: 35
+    Speed: 53
+    Carried_Speed: 33
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_2 Lev 2
+    Level_Upgrade: 2
+    Work_Efficiency: 53
+    Speed: 55
+    Carried_Speed: 2
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_2 Lev 3
+    Level_Upgrade: 3
+    Work_Efficiency: 71
+    Speed: 57
+    Carried_Speed: 5
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_2 Lev 4
+    Level_Upgrade: 4
+    Work_Efficiency: 89
+    Speed: 59
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_2 Lev 5
+    Level_Upgrade: 5
+    Work_Efficiency: 107
+    Speed: 61
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_2 Lev 6
+    Level_Upgrade: 6
+    Work_Efficiency: 125
+    Speed: 63
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_2 Lev 7
+    Level_Upgrade: 7
+    Work_Efficiency: 143
+    Speed: 65
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_2 Lev 8
+    Level_Upgrade: 8
+    Work_Efficiency: 161
+    Speed: 67
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_2 Lev 9
+    Level_Upgrade: 9
+    Work_Efficiency: 179
+    Speed: 69
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_2 Lev 10
+    Level_Upgrade: 10
+    Work_Efficiency: 197
+    Speed: 71
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_3 Lev 0
+    Level_Upgrade: 0
+    Work_Efficiency: 215
+    Speed: 73
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_3 Lev 1
+    Level_Upgrade: 1
+    Work_Efficiency: 215
+    Speed: 73
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_3 Lev 2
+    Level_Upgrade: 2
+    Work_Efficiency: 233
+    Speed: 75
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_3 Lev 3
+    Level_Upgrade: 3
+    Work_Efficiency: 251
+    Speed: 77
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_3 Lev 4
+    Level_Upgrade: 4
+    Work_Efficiency: 269
+    Speed: 79
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_3 Lev 5
+    Level_Upgrade: 5
+    Work_Efficiency: 287
+    Speed: 81
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_3 Lev 6
+    Level_Upgrade: 6
+    Work_Efficiency: 305
+    Speed: 83
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_3 Lev 7
+    Level_Upgrade: 7
+    Work_Efficiency: 323
+    Speed: 85
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_3 Lev 8
+    Level_Upgrade: 8
+    Work_Efficiency: 341
+    Speed: 87
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_3 Lev 9
+    Level_Upgrade: 9
+    Work_Efficiency: 359
+    Speed: 89
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_3 Lev 10
+    Level_Upgrade: 10
+    Work_Efficiency: 359
+    Speed: 89
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_4 Lev 0
+    Level_Upgrade: 0
+    Work_Efficiency: 395
+    Speed: 93
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_4 Lev 1
+    Level_Upgrade: 1
+    Work_Efficiency: 413
+    Speed: 95
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_4 Lev 2
+    Level_Upgrade: 2
+    Work_Efficiency: 431
+    Speed: 97
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_4 Lev 3
+    Level_Upgrade: 3
+    Work_Efficiency: 449
+    Speed: 99
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_4 Lev 4
+    Level_Upgrade: 4
+    Work_Efficiency: 467
+    Speed: 101
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_4 Lev 5
+    Level_Upgrade: 5
+    Work_Efficiency: 485
+    Speed: 103
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_4 Lev 6
+    Level_Upgrade: 6
+    Work_Efficiency: 503
+    Speed: 105
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_4 Lev 7
+    Level_Upgrade: 7
+    Work_Efficiency: 521
+    Speed: 107
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_4 Lev 8
+    Level_Upgrade: 8
+    Work_Efficiency: 539
+    Speed: 109
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_4 Lev 9
+    Level_Upgrade: 9
+    Work_Efficiency: 557
+    Speed: 111
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_4 Lev 10
+    Level_Upgrade: 10
+    Work_Efficiency: 575
+    Speed: 113
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_5 Lev 0
+    Level_Upgrade: 0
+    Work_Efficiency: 593
+    Speed: 115
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_5 Lev 1
+    Level_Upgrade: 1
+    Work_Efficiency: 611
+    Speed: 117
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_5 Lev 2
+    Level_Upgrade: 2
+    Work_Efficiency: 629
+    Speed: 119
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_5 Lev 3
+    Level_Upgrade: 3
+    Work_Efficiency: 647
+    Speed: 121
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_5 Lev 4
+    Level_Upgrade: 4
+    Work_Efficiency: 665
+    Speed: 123
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_5 Lev 5
+    Level_Upgrade: 5
+    Work_Efficiency: 683
+    Speed: 125
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_5 Lev 6
+    Level_Upgrade: 6
+    Work_Efficiency: 701
+    Speed: 127
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_5 Lev 7
+    Level_Upgrade: 7
+    Work_Efficiency: 719
+    Speed: 129
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_5 Lev 8
+    Level_Upgrade: 8
+    Work_Efficiency: 737
+    Speed: 131
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_5 Lev 9
+    Level_Upgrade: 9
+    Work_Efficiency: 755
+    Speed: 133
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_5 Lev 10
+    Level_Upgrade: 10
+    Work_Efficiency: 773
+    Speed: 135
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_6 Lev 0
+    Level_Upgrade: 0
+    Work_Efficiency: 809
+    Speed: 139
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_6 Lev 1
+    Level_Upgrade: 1
+    Work_Efficiency: 827
+    Speed: 141
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_6 Lev 2
+    Level_Upgrade: 2
+    Work_Efficiency: 845
+    Speed: 143
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_6 Lev 3
+    Level_Upgrade: 3
+    Work_Efficiency: 863
+    Speed: 145
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_6 Lev 4
+    Level_Upgrade: 4
+    Work_Efficiency: 881
+    Speed: 147
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_6 Lev 5
+    Level_Upgrade: 5
+    Work_Efficiency: 899
+    Speed: 149
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_6 Lev 6
+    Level_Upgrade: 6
+    Work_Efficiency: 917
+    Speed: 151
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_6 Lev 7
+    Level_Upgrade: 7
+    Work_Efficiency: 935
+    Speed: 153
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_6 Lev 8
+    Level_Upgrade: 8
+    Work_Efficiency: 953
+    Speed: 155
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_6 Lev 9
+    Level_Upgrade: 9
+    Work_Efficiency: 971
+    Speed: 157
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2
+  - Unit_Id: Miner_6 Lev 10
+    Level_Upgrade: 10
+    Work_Efficiency: 971
+    Speed: 157
+    Carried_Speed: 6
+    Critical_Power: 2
+    Critical_Chance: 2
+    Max_Carried_Resources: 2
+    Working_Speed_X_Multiplier: 2
+    Upgrade_Price_Soft_Currency: 2

@@ -5,28 +5,19 @@ using System.Collections;
 [ExecuteInEditMode, RequireComponent(typeof(CVSLoader), typeof(SheetProcessor))]
 public class GoogleSheetLoader : MonoBehaviour
 {
-    public event Action<CubesData> OnProcessData;
+    public event Action<MinerAllLists> OnProcessData;
     
     [SerializeField] private string _sheetId;
-    [SerializeField] private CubesData _data;
-//    [SerializeField] private MinerStats Mdata;
+    [SerializeField] private string _sheetTabId;
+    [SerializeField] private MinerAllLists _data;
+
     
     private CVSLoader _cvsLoader;
     private SheetProcessor _sheetProcessor;
     public CubeSpawner _cubeSpawner;
     
-    public bool UpDate = false;
 
-    private void Update()
-    {
-        if (UpDate)
-        {
-            DoMyWork();
-            UpDate = false;
-        }
-    }
-
-    private void DoMyWork()
+    public void DoMyWork()
     {
         Debug.Log("Start Edit");
         StartData();
@@ -43,7 +34,7 @@ public class GoogleSheetLoader : MonoBehaviour
 
     private void DownloadTable()
     {
-        _cvsLoader.DownloadTable(_sheetId, OnRawCVSLoaded);
+        _cvsLoader.DownloadTable(_sheetId, _sheetTabId, OnRawCVSLoaded);
     }
 
     private void OnRawCVSLoaded(string rawCVSText)

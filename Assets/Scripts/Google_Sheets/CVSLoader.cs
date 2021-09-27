@@ -7,10 +7,12 @@ public class CVSLoader : MonoBehaviour
 {
     private bool _debug = true;
     private const string url = "https://docs.google.com/spreadsheets/d/*/export?format=csv";
+    //&gid=359725064
 
-    public void DownloadTable(string sheetId, Action<string> onSheetLoadedAction)
+    public void DownloadTable(string sheetId,string sheetTabId, Action<string> onSheetLoadedAction)
     {
-        string actualUrl = url.Replace("*", sheetId);
+        string actualUrl_1 = url.Replace("*", sheetId);
+        string actualUrl = actualUrl_1 + "&gid=" + sheetTabId;
         StartCoroutine(DownloadRawCvsTable(actualUrl, onSheetLoadedAction));
     }
 

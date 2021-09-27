@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63708dd7bf32b664b97e7df7275e3258, type: 3}
+  m_Script: {fileID: 0}
   m_Name: CaracterData
-  m_EditorClassIdentifier: 
-  MinerDataList: []
+  m_EditorClassIdentifier: Assembly-CSharp::MinerAllLists
+  MinerAllList: []

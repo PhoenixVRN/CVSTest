@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable, CreateAssetMenu(fileName = "CaracterData", menuName = "Caracter / Caracter Data", order = 51)]
-//[System.Serializable]
-public class CubesData : ScriptableObject
+//[System.Serializable, CreateAssetMenu(fileName = "CaracterData", menuName = "Caracter / Caracter Data", order = 51)]
+[System.Serializable]
+public class CubesData 
 {
-    [Header("Miner")]
+    [Header("Miners")]
     public List<MinersData> MinerDataList;
     
 
@@ -20,11 +20,11 @@ public class CubesData : ScriptableObject
     }
 }
 
-// [System.Serializable, CreateAssetMenu(fileName = "CaracterData", menuName = "Caracter / Caracter Data", order = 51)]
-// public class MinerStats: ScriptableObject
-// {
-//     public List<CubesData> MinerStat;
-// }
+[System.Serializable, CreateAssetMenu(fileName = "CaracterData", menuName = "Caracter / Caracter Data", order = 51)]
+ public class MinerAllLists: ScriptableObject
+ {
+     public List<CubesData> MinerAllList;
+ }
 
 [System.Serializable]
 public class MinersData
@@ -44,7 +44,7 @@ public class MinersData
     
     public override string ToString()
     {
-        return $"Id {Unit_Id} \nPosition {Level_Upgrade} \nLocalScale {Work_Efficiency} \nSpeed {Speed} \nCarried_Speed {Carried_Speed} \nCritical_Power{Critical_Power}" +
+        return $"Unit_Id {Unit_Id} \nLevel_Upgrade {Level_Upgrade} \nWork_Efficiency {Work_Efficiency} \nSpeed {Speed} \nCarried_Speed {Carried_Speed} \nCritical_Power{Critical_Power}" +
                $"\nCritical_Chance {Critical_Chance} \nMax_Carried_Resources {Max_Carried_Resources} \nWorking_Speed_X_Multiplier {Working_Speed_X_Multiplier}" +
                $" \nUpgrade_Price_Soft_Currency {Upgrade_Price_Soft_Currency}";
     }
